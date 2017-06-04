@@ -9,7 +9,7 @@ class Pigments extends Component {
     console.log("Value of tidbits is :" + this.props.tidbits);
     const fillers = this.props.tidbits;
     return(
-      <Text style = {styles.welcome}> Powerful as {fillers[0]}, Yet., Humble as {fillers[1]}</Text>
+      <Text style = {styles.welcome}> Powerfull as {fillers[0]}, Yet., Humble as {fillers[1]}</Text>
       );
   };
 }

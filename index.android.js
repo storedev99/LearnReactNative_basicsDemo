@@ -15,8 +15,19 @@ import {
 import Pigments from './src/components/Pigments';
 
 export default class refreshLearning extends Component {
+  constructor(props){
+    super(props);
+    this.state = {colorHere: '#333333'};
+
+    setInterval(() => {
+      this.setState(
+        {
+          colorHere:'#ff0022'
+        });
+    }, 3000);
+  }
+
   render() {
-    
     let pic = {uri:"https://static01.nyt.com/images/2016/06/29/t-magazine/24tmag-ali-slide-E4IJ/24tmag-ali-slide-E4IJ-superJumbo.jpg"};
     let tidbits =
       [
@@ -28,7 +39,7 @@ export default class refreshLearning extends Component {
       <View style = {styles.container}>
         <Image source = {pic} style = {{height:500, width:500}}/>
         <Pigments tidbits = {tidbits} />
-        <Text style = {styles.instructions}> Click here to enter </Text>
+        <Text style = {[styles.instructions, {color: this.state.colorHere}]}> Click here to enter </Text>
       </View>
     );
   }
@@ -47,9 +58,10 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   instructions: {
+    fontSize: 18,
     textAlign: 'center',
-    color: '#333333',
     marginBottom: 5,
+    marginTop: 20
   },
 });
 

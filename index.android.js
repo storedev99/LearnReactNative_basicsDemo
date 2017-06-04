@@ -28,7 +28,11 @@ export default class refreshLearning extends Component {
   }
 
   render() {
-    let pic = {uri:"https://static01.nyt.com/images/2016/06/29/t-magazine/24tmag-ali-slide-E4IJ/24tmag-ali-slide-E4IJ-superJumbo.jpg"};
+    
+    let pic = {
+      uri:"https://static01.nyt.com/images/2016/06/29/t-magazine/24tmag-ali-slide-E4IJ/24tmag-ali-slide-E4IJ-superJumbo.jpg"
+      };
+    
     let tidbits = [
         'wind blow',
         'ground below'

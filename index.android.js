@@ -12,6 +12,7 @@ import {
   View,
   Image
 } from 'react-native';
+import Pigments from './src/components/Pigments';
 
 export default class refreshLearning extends Component {
   render() {
@@ -31,16 +32,6 @@ export default class refreshLearning extends Component {
       </View>
     );
   }
-}
-
-class Pigments extends Component {
-  render(){
-    console.log("Value of tidbits is :" + this.props.tidbits);
-    const fillers = this.props.tidbits;
-    return(
-      <Text style = {styles.welcome}> Powerful as a {fillers[0]}., Humble as {fillers[1]}</Text>
-      );
-  };
 }
 
 const styles = StyleSheet.create({

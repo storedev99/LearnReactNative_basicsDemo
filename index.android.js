@@ -15,14 +15,32 @@ import {
 
 export default class refreshLearning extends Component {
   render() {
+    
     let pic = {uri:"https://static01.nyt.com/images/2016/06/29/t-magazine/24tmag-ali-slide-E4IJ/24tmag-ali-slide-E4IJ-superJumbo.jpg"};
+    let tidbits =
+      [
+        'wind blow',
+        'ground below'
+      ];
+
     return (
-      <View>
+      <View style = {styles.container}>
         <Image source = {pic} style = {{height:500, width:500}}/>
-        <Text> Strong as the wind, and friendly as a dove </Text>
+        <Pigments tidbits = {tidbits} />
+        <Text style = {styles.instructions}> Click here to enter </Text>
       </View>
     );
   }
+}
+
+class Pigments extends Component {
+  render(){
+    console.log("Value of tidbits is :" + this.props.tidbits);
+    const fillers = this.props.tidbits;
+    return(
+      <Text style = {styles.welcome}> Powerful as a {fillers[0]}., Humble as {fillers[1]}</Text>
+      );
+  };
 }
 
 const styles = StyleSheet.create({
@@ -33,7 +51,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 45,
     textAlign: 'center',
     margin: 10,
   },

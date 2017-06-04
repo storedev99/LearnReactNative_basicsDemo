@@ -22,15 +22,14 @@ export default class refreshLearning extends Component {
     setInterval(() => {
       this.setState(
         {
-          colorHere:'#ff0022'
+          colorHere: ((this.state.colorHere === "#333333") ? "#ff0022" : "#333333")
         });
-    }, 3000);
+    }, 1000);
   }
 
   render() {
     let pic = {uri:"https://static01.nyt.com/images/2016/06/29/t-magazine/24tmag-ali-slide-E4IJ/24tmag-ali-slide-E4IJ-superJumbo.jpg"};
-    let tidbits =
-      [
+    let tidbits = [
         'wind blow',
         'ground below'
       ];
